@@ -1,0 +1,82 @@
+html {
+  background-color: crimson;
+  padding-top: 30px;
+}
+
+.top {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-style: inset;
+  border-width: 10px;
+  border-color: black;
+}
+
+.top p {
+  font-size: 20px;
+}
+
+.question {
+  text-align: center;
+  background-color: crimson;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.question strong {
+  font-size: 18px;
+}
+
+.question i {
+  font-size: 18px;
+}
+
+.survey {
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: white;
+  border-style: inset;
+  border-width: 10px;
+  border-color: black;
+}
+
+footer {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  font-size: 25px;
+}
+
+input[type=submit] {
+  text-align: center;
+  padding: 20px 70px 20px 70px;
+  font-size: 16px;
+  background-color: black;
+  border-color: crimson;
+  border-width: 10px;
+  border-style: inset;
+  color: white;
+  font-size: 25px;
+}
+
+.container {
+  text-align: center;
+}
+
+.checkdiv {
+  text-align: left;
+  margin-left: 38%;
+  margin-right: 30%;
+}
