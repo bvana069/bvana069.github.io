@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<title>Loblaws</title>
+
+	<a href="index.html">
+	<img src = "assets/Loblaws.png" class = "image" width = "800" height = "200">
+	</a>
+	
+	
+	
+
+</head>
+
+<body>
+
+<div class = "instructions">
+	<h1>Welcome to Loblaws!</h1>
+	<p>Step 1: Click on "Client" to enter your product preferences.
+	<br><br>
+	Step 2: Click on "Products" to see available products filtered by your preferences.
+	<br><br>
+	Step 3: Add all desired products to your cart.
+	<br><br>
+	Step 4: Click on "Cart" to finalize your purchase.
+	</p>
+</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about yourself.</p>
+  Pick your preference filters:<br>
+  <div class="preferences">
+    <input type="checkbox" class="checkbox" id="LactoseIntolerant" name="LactoseIntolerant" onclick="check();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="LactoseIntolerant">Lactose-Free</label><br>
+    <input type="checkbox" class="checkbox" id="NutAllergy" name="NutAllergy" onclick="check();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="NutAllergy">Nut-Free</label><br>
+    <input type="checkbox" class="checkbox" id="Organic" name="Organic" onclick="check();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="Organic">Organic-Only</label><br>
+    <input type="checkbox" class="checkbox" id="None" name="None" onclick="checkNone();populateListProductChoices(this.id, 'displayProduct')">
+    <label for="None">None</label>
+  </div>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct" class = "displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body> 
+
+<footer>
+	<p>
+	<b><i>
+	Website designed by 
+	<a href = "mailto:bvana069@uottawa.ca">Benoit</a>
+	</i></b>
+	</p>
+	
+	<div class = "note">
+	<p>Note: Even though I get a proper filtering of <br>the unwanted items based on the preferences, 
+	<br>I could not figure out why the product names 
+	<br>wouldn't show. Nor why the total does not get 
+	<br>calculated in the cart section.
+	</p>
+	</div>
+</footer>
+
+</html>
