@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<title>Loblaws</title>
+
+	<a href="index.html">
+	<img src = "assets/Loblaws.png" class = "image" width = "800" height = "200">
+	</a>
+</head>
+	
+<body>
+
+<div class = "instructions">
+	<p>Step 1: Click on "Client" to enter your product preferences.
+	<br>
+	Step 2: Enable the product category you wish to browse.
+	<br>
+	Step 3: Add all desired products to your cart.
+	<br>
+	Step 4: Click on "Add Selection to Cart" once your selection is complete.
+	<br>
+	Step 5: Click "Cart" to review your order and checkout.
+	</p>
+</div>
+
+<div id="clientModal" class="modal">
+
+<div class="modal-content">
+  <div class="modal-header">
+	<span class="close">&times;</span>
+	<h2>Preferences</h2>
+  </div>
+  <div class="modal-body">
+	<p>Please select the following options to filter your available products:<br>
+	<input type="checkbox" id="lactoseIntolerant" name="lactoseIntolerant" value="LactoseIntolerant" onchange="populateListProductChoices(this.id)">
+	<label for="lactoseIntolerant">Lactose-Free</label><br>
+	<input type="checkbox" id="nutAllergies" name="nutAllergies" value="NutAleergies" onchange="populateListProductChoices(this.id)">
+	<label for="nutAllergies">Nut-Free</label><br>
+	<input type="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+	<label for="organic">Organic Only</label><br>
+	<br>
+	Please select how you wish to receive your order:<br>
+	<input type="checkbox" id="delivered" name="delivered" value="Delivered">
+	<label for="delivered">Delivery</label><br>
+	<input type="checkbox" id="curbSide" name="curbSide" value="CurbSide">
+	<label for="delivered">Pickup</label><br>
+  </div>
+</div>
+</div>
+
+  <div id="cartModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Order</h2>
+      </div>
+      <div class="modal-body">
+        <div id="displayCart"></div>
+        <button class="block block-button" style="text-align: center; margin: 0 auto;">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="Products" class="tabcontent">
+    <div>
+      <button id="clientButton" class="block block-button">
+        Client
+      </button>
+      <button id="cartButton" class="block block-button">
+        Cart
+      </button>
+
+    </div>
+    
+	<h4>Product Categories</h4>
+    <div class="tab">
+      <button class="tablinks" onclick="toggleCategory(event, 'Dairy')">Dairy</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Nuts')">Nuts</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Produce')">Produce</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Chips')">Chips</button>
+      </div>
+    <div id="displayProduct"></div>
+    <button id="addCart" type="button" class="block block-button" onclick="selectedItems()">
+      Add Selection To Cart
+    </button>
+  </div>
+
+  <script src="scripts/groceries.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
