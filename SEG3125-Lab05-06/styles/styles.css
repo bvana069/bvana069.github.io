@@ -1,0 +1,54 @@
+
+p{
+    font-size: 20px;
+}
+.btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-block{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar1 {
+    background-color: #3352FF;
+}
+
+.navbar2 {
+    background-color: #747578;
+}
+
+.nav-link{
+	font-family: Garamond;
+    font-weight: bold;
+	font-size: 30px;
+}
+
+.aboutUs {
+    border: 5px solid #A0A3AA;
+    background-color: #CDD8F5;
+}
+
+.myVetServices {
+    border: 5px solid #A0A3AA;
+    background-color: #CDD8F5;
+}
+
+h1 {
+    font-family: Garamond;
+    font-weight: bold;
+	font-size: 70px;
+}
+
+h2 {
+    
+    font-family: Garamond;
+    font-weight: bold;
+}
+
+p {
+    font-family: Garamond;
+    font-size: 20px;
+}
